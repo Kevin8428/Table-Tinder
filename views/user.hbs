@@ -34,17 +34,14 @@ $(document).ready(function() {
     var count = 0
     for (var i = 0; i < data.length; i++) {
       if (data[i].attendees[0] != null){
-        var names = data[i].attendees[0].split(',');
+        var names = data[i].attendees;
         for (var j = 0; j < names.length; j++) {
           if(names[j]== username || names[j]== (' ' + username)){
-            count = count + 1
             var restaurant = data[i].restaurant;
             var tableRow = $("<tr>");
             var attendees = data[i].attendees.toString();
             var max = data[i].maxAttendees;
             var min = data[i].minAttendees;
-            //  var removeBtn = document.createElement('td');
-
              var remove = document.createElement("button");
              remove.className = 'appointmentClass'
              remove.id = data[i]._id;
