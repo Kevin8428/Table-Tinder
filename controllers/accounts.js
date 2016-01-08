@@ -52,6 +52,6 @@ module.exports.accountUpdate = function(req, res){
   });
 }
 
-module.exports.logout = function(req, res){
-  req.session.destroy();
-}
+// module.exports.logout = function(req, res){
+//   req.session.destroy();
+// }
